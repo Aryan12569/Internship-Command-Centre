@@ -1,0 +1,17 @@
+{
+  "routes": [
+    {"path":"/","title":"Dashboard"},
+    {"path":"/dashboard","title":"Dashboard"},
+    {"path":"/opportunities","title":"Opportunities"},
+    {"path":"/opportunity/:id","title":"Opportunity Detail"},
+    {"path":"/applications","title":"My Applications"},
+    {"path":"/application/:id","title":"Application Detail"},
+    {"path":"/readiness","title":"Internship Readiness"},
+    {"path":"/interviews","title":"Interviews & Deadlines"},
+    {"path":"/deadlines","title":"Interviews & Deadlines"},
+    {"path":"/documents","title":"My Documents"},
+    {"path":"/profile","title":"My Profile"},
+    {"path":"/settings","title":"Settings"},
+    {"path":"/help","title":"Help Center"}
+  ]
+}
