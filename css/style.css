@@ -499,3 +499,18 @@ button, a, input, select, textarea { transition: border-color .18s ease, backgro
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+
+/* Coordinator analytics */
+.cohort-bars { display: flex; flex-direction: column; gap: 15px; }
+.cohort-bar-row { display: grid; grid-template-columns: 145px minmax(120px, 1fr) 86px; align-items: center; gap: 10px; }
+.cohort-bar-label { display: flex; justify-content: space-between; gap: 8px; font-size: 11px; color: var(--muted); }
+.cohort-bar-label strong { color: var(--ink); }
+.cohort-bar-row small { color: var(--muted-2); font-size: 10px; text-align: right; }
+.progress-fill.gray { background: #aeb7c6; }
+.progress-fill.indigo { background: var(--indigo); }
+.login-form .btn + .btn { margin-top: 9px; }
+@media (max-width: 760px) {
+  .cohort-bar-row { grid-template-columns: 1fr 45px; gap: 5px 10px; }
+  .cohort-bar-row .progress-track { grid-column: 1 / -1; grid-row: 2; }
+  .cohort-bar-row small { text-align: right; grid-column: 2; grid-row: 1; }
+}

@@ -114,5 +114,20 @@
     { id: 'dead-orbit', applicationId: 'app-orbit', title: 'Application deadline', company: 'Orbit Systems', date: offsetDate(-1), priority: 'High', status: 'Overdue' }
   ];
 
-  window.ICC_DATA = { opportunities, applications, documents, profile, readiness, activity, makeInterviews, makeDeadlines, today };
+  const coordinator = {
+    profile: { name: 'Priya Nair', role: 'coordinator', title: 'Internship Program Coordinator', institution: 'Kristu Jayanti University', cohort: 'BBA Business Analytics · 2027' },
+    cohort: { name: 'BBA Business Analytics · 2027', total: 42, active: 36, averageReadiness: 71, placed: 8, lastSynced: 'Today, 9:40 AM' },
+    stages: [
+      { label: 'Prepare', count: 6, tone: 'gray' }, { label: 'Discover', count: 9, tone: 'blue' }, { label: 'Apply', count: 13, tone: 'indigo' }, { label: 'Interview', count: 6, tone: 'amber' }, { label: 'Offer / placed', count: 8, tone: 'green' }
+    ],
+    readiness: [
+      { label: 'Profile complete', value: 86, note: '36 of 42 students' }, { label: 'Resume ready', value: 79, note: '33 of 42 students' }, { label: 'Interview practice', value: 58, note: '24 of 42 students' }, { label: 'Deadline hygiene', value: 74, note: '31 of 42 students' }
+    ],
+    supportQueue: [
+      { label: 'Readiness below 50%', count: 5, tone: 'red', action: 'Plan workshop' }, { label: 'No active application', count: 6, tone: 'amber', action: 'Send nudge' }, { label: 'Deadline risk this week', count: 4, tone: 'amber', action: 'Review risks' }
+    ],
+    themes: ['Resume tailoring', 'Interview confidence', 'Finding relevant roles']
+  };
+
+  window.ICC_DATA = { opportunities, applications, documents, profile, readiness, activity, makeInterviews, makeDeadlines, coordinator, today };
 })();
